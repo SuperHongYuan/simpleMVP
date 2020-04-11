@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_key_light_blue">
+
+    <RelativeLayout
+        android:id="@+id/ll_loading"
+        android:layout_width="@dimen/dp166"
+        android:layout_height="@dimen/dp166"
+        android:layout_marginStart="@dimen/dp50"
+        android:layout_marginTop="@dimen/dp50"
+        android:layout_marginEnd="@dimen/dp50"
+        android:indeterminate="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--<ProgressBar-->
+            <!--android:id="@+id/pb_loading"-->
+            <!--style="@style/CustomProgressStyle"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_height="wrap_content" />-->
+
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="@dimen/dp166"
+            android:visibility="visible"
+            android:layout_height="@dimen/dp166" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp17"
+        android:layout_marginEnd="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp50"
+        android:textSize="@dimen/font_25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_loading"
+        tools:text="TextView" />
+</android.support.constraint.ConstraintLayout>

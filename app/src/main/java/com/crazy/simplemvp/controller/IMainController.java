@@ -14,4 +14,11 @@ package com.crazy.simplemvp.controller;
  * If the implementation is easy to explain, it may be a good idea.
  */
 public interface IMainController extends IBaseActivityController {
+
+    interface IPresenter extends IBaseActivityController.IPresenter {
+        /**
+         * @param msg 打印的消息
+         */
+        void print(String msg);
+    }
 }

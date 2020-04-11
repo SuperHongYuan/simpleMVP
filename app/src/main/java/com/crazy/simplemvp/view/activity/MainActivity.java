@@ -8,6 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.crazy.simplemvp.R;
 import com.crazy.simplemvp.controller.IMainController;
+import com.crazy.simplemvp.presenter.MainPresenter;
 
 import butterknife.BindView;
 
@@ -39,13 +40,13 @@ public class MainActivity extends BaseActivity<IMainController.IPresenter> imple
 
     @Override
     protected IMainController.IPresenter initPresenter() {
-        return null;
+        return new MainPresenter(this, mContext);
     }
 
 
     @Override
     protected void initData() {
-
+        mPresenter.print("hello world！");
     }
 
     @Override

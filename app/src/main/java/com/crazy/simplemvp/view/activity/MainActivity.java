@@ -1,10 +1,15 @@
 package com.crazy.simplemvp.view.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 
-import android.os.Bundle;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.crazy.simplemvp.R;
+import com.crazy.simplemvp.controller.IMainController;
+
+import butterknife.BindView;
 
 /**
  * Copyright (C), 2015-2020, XXX有限公司
@@ -19,11 +24,33 @@ import com.crazy.simplemvp.R;
  * If the implementation is hard to explain, it's a bad idea.
  * If the implementation is easy to explain, it may be a good idea.
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity<IMainController.IPresenter> implements IMainController.IView {
+
+    @BindView(R.id.tv_text)
+    TextView tvText;
+    @BindView(R.id.root_layout)
+    ConstraintLayout rootLayout;
+
+    @NonNull
+    @Override
+    protected View getRootLayout() {
+        return rootLayout;
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected IMainController.IPresenter initPresenter() {
+        return null;
     }
+
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected int setContentLayout() {
+        return R.layout.activity_main;
+    }
+
 }
